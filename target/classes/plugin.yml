@@ -1,21 +1,28 @@
 name: MineTP
-version: '1.0'
+version: '2.0'
 main: ljsure.cn.MineTP
-api-version: '1.21'
+api-version: '1.20'
 commands:
-  tpw:
-    description: Teleport to player or coordinates
-    usage: /tpw [player] or /tpw [x] [y] [z]
+  wtp:
+    description: 传送命令
+    usage: /wtp <玩家> 或 /wtp <x> <y> <z>
   killl:
-    description: Kill yourself
+    description: 自杀命令
     usage: /killl
+  minetp:
+    description: MineTP管理命令
+    usage: /minetp <add|remove|list|radius|reload|info>
+
 permissions:
-  minetp.tpw:
-    description: 允许只用tpw指令
-    default: true
+  minetp.wtp:
+    description: 使用传送命令
+    default: op
   minetp.killl:
-    description: 允许使用killl指令
-    default: true
+    description: 使用自杀命令
+    default: op
   minetp.notify:
-    description: 允许接受命令执行提示
+    description: 接收管理通知
+    default: op
+  minetp.admin:
+    description: MineTP管理权限
     default: op
