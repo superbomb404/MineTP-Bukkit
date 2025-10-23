@@ -83,11 +83,7 @@ public class MineTP extends JavaPlugin implements TabExecutor {
             return true;
         }
 
-        if (!player.hasPermission("minetp.wtp")) {
-            player.sendMessage("§c你没有使用权限！");
-            return true;
-        }
-
+        // 移除了权限检查，所有玩家都可以使用（只要在白名单中）
         if (args.length == 1) {
             Player target = Bukkit.getPlayer(args[0]);
             if (target == null) {
@@ -131,12 +127,7 @@ public class MineTP extends JavaPlugin implements TabExecutor {
             return true;
         }
 
-        // 移除了白名单检查，只检查权限
-        if (!player.hasPermission("minetp.killl")) {
-            player.sendMessage("§c你没有使用权限！");
-            return true;
-        }
-
+        // 移除了权限检查，所有玩家都可以使用
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "kill " + player.getName());
         player.sendMessage("§e你已自杀！");
         sendAdminNotification(player, "kill", null);

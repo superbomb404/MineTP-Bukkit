@@ -1,5 +1,5 @@
 name: MineTP
-version: '2.0'
+version: '2.1'
 main: ljsure.cn.MineTP
 api-version: '1.20'
 commands:
@@ -16,10 +16,10 @@ commands:
 permissions:
   minetp.wtp:
     description: 使用传送命令
-    default: op
+    default: true
   minetp.killl:
     description: 使用自杀命令
-    default: op
+    default: true
   minetp.notify:
     description: 接收管理通知
     default: op
